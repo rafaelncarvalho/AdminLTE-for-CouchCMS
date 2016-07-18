@@ -1,0 +1,34 @@
+<ul class="sidebar-menu">
+	
+	
+	<cms:admin_menuitems depth='1'>
+    <cms:if k_menu_is_header>
+    	<li class="header"><cms:show k_menu_title /></li>
+
+      <cms:admin_menuitems depth='1' childof=k_menu_name>
+          <li class="<cms:if k_is_current>active</cms:if>">
+          	<a href="<cms:show k_menu_link />" title="<cms:show k_menu_name />">
+	          	<cms:show_icon k_menu_icon /> 
+							<span><cms:show k_menu_title /></span>
+	          </a>
+	        </li>
+      </cms:admin_menuitems>
+
+      <cms:else />
+          <li class="<cms:if k_is_current>active</cms:if>">
+          	<a href="<cms:show k_menu_link />" title="<cms:show k_menu_name />">
+	          	<cms:show_icon k_menu_icon /> 
+	          	<span><cms:show k_menu_title /></span>
+	          </a>
+	        </li>
+      </cms:if>
+  </cms:admin_menuitems>
+</ul>
+
+
+<cms:if k_user_access_level ge '10'>
+    <div id="nav-links">
+        <a href="<cms:show k_admin_link />gen_dump.php">Download Dump</a>
+        <a class="popup-ajax" href="<cms:show k_admin_link />gen_htaccess.php" target="_blank" <cms:if k_prettyurls='0'>style="visibility:hidden;"</cms:if>>Generate .htaccess</a>
+    </div>
+</cms:if>

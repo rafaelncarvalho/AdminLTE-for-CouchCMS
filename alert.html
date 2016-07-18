@@ -1,0 +1,32 @@
+<cms:if k_alert_type='success' >
+    <cms:set alert_type="success" />
+    <cms:set icon='<i class="icon fa fa-check"></i>' />
+    <cms:set heading="Success!" />
+<cms:else_if k_alert_type='error' />    
+    <cms:set alert_type="danger" />
+    <cms:set icon='<i class="icon fa fa-ban"></i>' />
+    <cms:set heading="Error!" />
+<cms:else_if k_alert_type='warning' />  
+    <cms:set alert_type="warning" /> 
+    <cms:set icon='<i class="icon fa fa-warning"></i>' />
+    <cms:set heading="Warning!" />
+<cms:else />
+    <cms:set alert_type="info" /> 
+    <cms:set icon='<i class="icon fa fa-info"></i>' />
+    <cms:set heading="Info!" />
+</cms:if>
+
+
+<div class="alert alert-<cms:show alert_type /> alert-dismissible">
+  <h4>
+	  
+	  <cms:show icon />
+	  
+	  <cms:if k_alert_heading>
+	  	<cms:show k_alert_heading />
+	  <cms:else />
+	  	<cms:show heading />
+	  </cms:if>
+	</h4>
+  <cms:show k_alert_content />
+</div>

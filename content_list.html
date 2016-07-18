@@ -1,0 +1,49 @@
+<cms:set my_paginator='' />
+<cms:set my_paginator_label='' />
+<cms:set my_filters="<cms:render 'filters' />" />
+<cms:set my_list="<cms:render 'content_list_inner' />" />
+
+<div class="box">
+  <!-- /.box-header -->
+  <div class="box-body">
+
+    <cms:if my_filters || my_paginator>
+        <div class="ctrl-top">
+        
+            <cms:show my_filters />
+          
+            <div class="ctrl-right">
+                <cms:show my_paginator_label />
+                <cms:show my_paginator />
+            </div>
+        </div>
+        
+        <cms:if "<cms:not my_filters />"><div class="sep">&nbsp;</div></cms:if>    
+    </cms:if>   
+
+    <form name="<cms:show k_cur_form />" id="<cms:show k_cur_form />" class="bulk-form" action="" method="post">
+    
+        <cms:show my_list />
+        
+        <div class="box-body">
+          <cms:render 'batch_actions' />
+          <cms:render 'extended_actions' />
+        </div>
+        
+        <input type="hidden" id="nonce" name="nonce" value="<cms:create_nonce 'bulk_action_page' />">
+        <input type="hidden" id="k_bulk_action" name="k_bulk_action" value="">
+    </form>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer clearfix">
+	  <cms:show my_paginator />
+    <ul class="pagination pagination-sm no-margin pull-right">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+</div>
+<!-- /.box -->

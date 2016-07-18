@@ -1,0 +1,19 @@
+<cms:admin_actions childof='page'>
+    <cms:if k_action_is_custom >
+        <cms:if k_action_render>
+            <cms:render k_action_render />
+        <cms:else />
+            <cms:show k_action_html />
+        </cms:if>
+    <cms:else />
+    
+    
+    		<a class="btn btn-app" id="<cms:show k_action_name />" href="<cms:show k_action_link />"<cms:if k_action_target> target="<cms:show k_action_target/>"</cms:if><cms:if k_action_onclick> onclick="<cms:show k_action_onclick/>"</cms:if>>
+          
+          <cms:if k_action_icon ><i class="btn-icon"><cms:show_icon k_action_icon /></i></cms:if>
+          
+          <cms:show k_action_title />
+        </a>
+
+    </cms:if>
+</cms:admin_actions>
