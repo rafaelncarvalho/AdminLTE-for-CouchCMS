@@ -42,7 +42,7 @@
 		<span class="input-group-btn">
 	   
 	    <button 
-	        class="btn btn-info btn-flat" 
+	        class="btn btn-info btn-flat popup-iframe" 
 	        id="<cms:show k_field_input_id />_button" 
 	        <cms:if k_field_use_kcfinder >
 	            data-kc-finder="<cms:show k_field_input_id />" 
@@ -50,7 +50,6 @@
 	        <cms:else />
 	            href="<cms:show k_admin_link />includes/fileuploader/browser/browser.html?Type=Image&KField=<cms:show k_field_input_id />"
 	        </cms:if>
-	        href="<cms:show my_href />" 
 	        type="button"
 	    >
 	        <cms:show_icon 'cloud-upload' />
@@ -81,9 +80,9 @@
             COUCH.bindPopupImage( COUCH.el.$content.find( ".popup-img" ) );
             
             <cms:if k_field_use_kcfinder >
-                COUCH.bindPopupIframe( COUCH.el.$content.find( ".upload-group>.popup-iframe" ), COUCH.browseKCFinderOpen,  COUCH.browseKCFinderClose );
+                COUCH.bindPopupIframe( COUCH.el.$content.find( ".upload-group .popup-iframe" ), COUCH.browseKCFinderOpen,  COUCH.browseKCFinderClose );
             <cms:else />    
-                COUCH.bindPopupIframe( COUCH.el.$content.find( ".upload-group>.popup-iframe" ) );
+                COUCH.bindPopupIframe( COUCH.el.$content.find( ".upload-group .popup-iframe" ) );
             </cms:if>    
         });
         

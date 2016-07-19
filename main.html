@@ -19,29 +19,34 @@
   
   <link href="<cms:show k_system_theme_link />includes/magnific-popup/magnific-popup.css?v=<cms:show k_cms_build />" rel="stylesheet"/>
   
-  <link href="favicon.ico" rel="shortcut icon"/>
-  
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<cms:show k_theme_link />dist/css/skins/_all-skins.min.css">
   
-  <!--[if lt IE 9]><script src="<cms:show k_system_theme_link />includes/ie9.min.js?v=q"></script><![endif]-->
-  <!--[if lte IE 9]><script src="<cms:show k_system_theme_link />includes/matchmedia.min.js?v=q"></script><![endif]-->
-  <script src="<cms:show k_system_theme_link />includes/svg4everybody.min.js?v=q"></script>
-  <!--[if lt IE 9]><script src="<cms:show k_admin_link />includes/jquery-1.x.min.js?v=<cms:show k_cms_build />"></script><![endif]-->
-  <!--[if gte IE 9]><!--><script src="<cms:show k_admin_link />includes/jquery-2.x.min.js?v=<cms:show k_cms_build />"></script><!--<![endif]-->
-  <script src="<cms:show k_system_theme_link />includes/admin/main.js?v=<cms:show k_cms_build />"></script>
-  
   <cms:admin_css_files>
     <link rel="stylesheet" href="<cms:show k_css_file />" type="text/css" media="screen" />
   </cms:admin_css_files>
-
+  
+  <style>
+    <cms:admin_css />
+  </style>
+  
+  <!--[if lt IE 9]><script src="<cms:show k_theme_link />dist/js/jquery-1.x.min.js?v=<cms:show k_cms_build />"></script><![endif]-->
+  <!--[if gte IE 9]><!--><script src="<cms:show k_theme_link />dist/js/jquery-2.x.min.js?v=<cms:show k_cms_build />"></script><!--<![endif]-->
+  <script src="<cms:show k_theme_link />dist/js/main.js?v=<cms:show k_cms_build />"></script>
+  
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  
+  <cms:admin_js_files>
+    <script type="text/javascript" src="<cms:show k_js_file />"></script>
+  </cms:admin_js_files>
+  
+  <link href="favicon.ico" rel="shortcut icon"/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 
@@ -481,5 +486,11 @@
 <script src="<cms:show k_theme_link />dist/js/demo.js"></script>
 
 <script src="<cms:show k_system_theme_link />includes/magnific-popup/magnific-popup.min.js?v=q<cms:show k_cms_build />"></script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    <cms:admin_js />
+    //]]>
+</script>
 </body>
 </html>
