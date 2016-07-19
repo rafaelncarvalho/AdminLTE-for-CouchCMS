@@ -101,3 +101,6 @@ table .checkbox input[type=checkbox] {
 	margin-bottom: 24px;
 }
 
+div.mfp-iframe-scaler iframe {
+	background: #fff;
+}
