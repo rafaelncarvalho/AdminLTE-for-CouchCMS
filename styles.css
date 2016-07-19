@@ -1,5 +1,13 @@
+#login-logo {
+	max-width: 100%;
+}
+
 #logo { 
 	max-width: 150px; 
+}
+
+.user-panel {
+	height: 35px;
 }
 
 .sidebar-menu .header {
@@ -11,6 +19,14 @@
     width: 20px;
     height: 12px;
     fill: #b8c7ce;
+}
+
+.sidebar-mini.sidebar-collapse #nav-links {
+	display: none;
+}
+
+.sidebar-mini.sidebar-collapse .logo {
+	padding-left: 4px;
 }
 
 .btn-icon svg.i {
@@ -86,6 +102,31 @@
 	height: 12px;
 	width: 23px;
 	fill: white;
+}
+
+.img-preview svg.i {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	width: 64px;
+	height: 64px;
+	padding: 11px;
+	border-radius: 6px;
+	opacity: 0;
+	margin: -32px -32px 0 0;
+	background-color: rgba(255,255,255,.35);
+	fill: #666666;
+}
+
+.img-preview .popup-img:hover svg.i  {
+	opacity: 1;
+	    -moz-transition: opacity .15s ease;
+    -webkit-transition: opacity .15s ease;
+    transition: opacity .15s ease;
+}
+
+.img-preview .popup-img {
+	position: relative;
 }
 
 #top {

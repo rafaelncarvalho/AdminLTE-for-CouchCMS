@@ -8,7 +8,11 @@
       <cms:admin_menuitems depth='1' childof=k_menu_name>
           <li class="<cms:if k_is_current>active</cms:if>">
           	<a href="<cms:show k_menu_link />" title="<cms:show k_menu_name />">
-	          	<cms:show_icon k_menu_icon /> 
+	          	<cms:if k_menu_icon>
+	          		<cms:show_icon k_menu_icon /> 
+	          	<cms:else />
+	          		<cms:show_icon 'file' /> 
+	          	</cms:if>
 							<span><cms:show k_menu_title /></span>
 	          </a>
 	        </li>
@@ -17,7 +21,11 @@
       <cms:else />
           <li class="<cms:if k_is_current>active</cms:if>">
           	<a href="<cms:show k_menu_link />" title="<cms:show k_menu_name />">
-	          	<cms:show_icon k_menu_icon /> 
+	          	<cms:if k_menu_icon>
+	          		<cms:show_icon k_menu_icon /> 
+	          	<cms:else />
+	          		<cms:show_icon 'file' /> 
+	          	</cms:if>
 	          	<span><cms:show k_menu_title /></span>
 	          </a>
 	        </li>
