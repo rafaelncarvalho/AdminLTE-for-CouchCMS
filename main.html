@@ -49,7 +49,7 @@
   
   <link href="favicon.ico" rel="shortcut icon"/>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini layout-boxed">
 
 <cms:if k_show_simple>
   <div id="content">
@@ -70,16 +70,13 @@
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
       </a>
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="<cms:show k_user_edit_link />" class="dropdown-toggle" data-toggle="dropdown">
               <span class="hidden-xs"><cms:show k_user_title /></span>
             </a>
             <ul class="dropdown-menu">
@@ -87,23 +84,7 @@
               <li class="user-header">
                 <p>
                   <cms:show k_user_title />
-                  <small>Member since Nov. 2012</small>
                 </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
@@ -135,6 +116,7 @@
         </div>
       </div>
       <!-- search form -->
+<!--
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Search...">
@@ -144,6 +126,7 @@
               </span>
         </div>
       </form>
+-->
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <cms:render 'sidebar' />
