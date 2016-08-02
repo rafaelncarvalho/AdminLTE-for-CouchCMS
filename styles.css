@@ -149,6 +149,28 @@ div.mfp-iframe-scaler iframe {
 	background: #fff;
 }
 
+.icon.tt {
+	display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
 
 /* PAGINATION */
 
@@ -193,3 +215,24 @@ div.mfp-iframe-scaler iframe {
   fill: #666666;
 }
 
+/* ADVANCE SETTINGS DROPDOWN */
+
+#settings-panel {
+	position: relative;
+	top: -100px;
+	float: right;
+}
+
+#settings-panel .btn {
+	float: right;
+}
+
+#settings-panel .panel-body {
+	border: 1px solid silver;
+	top: 34px;
+	right: 0px;
+	position: absolute;
+	width: 300px;
+	background-color: white;
+	z-index: 1;
+}
